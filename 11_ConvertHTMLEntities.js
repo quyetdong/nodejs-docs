@@ -17,5 +17,5 @@ function convertHTML(str) {
   return res;
 }
 
-export { convertHTML };
 convertHTML('');
+export { convertHTML };
