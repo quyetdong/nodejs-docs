@@ -33,9 +33,11 @@
     "prettier": "1.12.0",
     "pretty-quick": "^1.4.1"
   },
-  "presets": [
-    "env"
-  ],
+  "babel": {
+    "presets": [
+      "env"
+    ]
+  },
   "lint-staged": {
     "*.js": [
       "prettier --write",

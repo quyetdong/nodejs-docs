@@ -1,6 +1,5 @@
 /* eslint no-undef: 0 */
 // //// Check truthy predicate on all elements of collection //////////////
-
 const booWho = require('../9_BooWho.js');
 const uniteUnique = require('../10_SortedUnion.js');
 
