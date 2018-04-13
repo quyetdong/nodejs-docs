@@ -1,0 +1,46 @@
+{
+  "name": "fa_nodejs1801_node",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "scripts": {
+    "pretty": "prettier --write",
+    "eslint": "eslint --fix",
+    "test": "jest",
+    "precommit": "lint-staged && jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/quyetdong/FA_NODEJS1801_Node.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/quyetdong/FA_NODEJS1801_Node/issues"
+  },
+  "homepage": "https://github.com/quyetdong/FA_NODEJS1801_Node#readme",
+  "dependencies": {
+    "eslint": "^4.19.1",
+    "husky": "^0.14.3",
+    "jest": "^22.4.3",
+    "lint-staged": "^7.0.4"
+  },
+  "devDependencies": {
+    "babel-cli": "^6.26.0",
+    "babel-preset-env": "^1.6.1",
+    "eslint-config-airbnb-base": "^12.1.0",
+    "eslint-plugin-import": "^2.11.0",
+    "prettier": "1.12.0",
+    "pretty-quick": "^1.4.1"
+  },
+  "presets": [
+    "env"
+  ],
+  "lint-staged": {
+    "*.js": [
+      "prettier --write",
+      "eslint --fix",
+      "git add"
+    ]
+  }
+}
