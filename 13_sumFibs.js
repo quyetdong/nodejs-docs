@@ -56,7 +56,7 @@ const sumFibs3 = (num) => {
   const m = new Map();
 
   const memorized = fn =>
-    function (n) {
+    function cache(n) {
       if (!m.has(n)) {
         m.set(n, fn(n));
       }
