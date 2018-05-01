@@ -51,24 +51,22 @@ app.get('/', (req, res) => {
 });
 
 app.post('/addPhone', async (req, res) => {
-  readPromise('/data.json')
-    .then((dataFile) => {
-      const data = JSON.parse(dataFile) || [];
-      const id = data[data.length - 1].id + 1 || 1;
-      const obj = { id, name: req.body.name, price: req.body.price };
+  let dataFile;
 
-      data.push(obj);
+  try {
+    dataFile = await readPromise('/data.json');
+    const data = JSON.parse(dataFile) || [];
+    const id = data[data.length - 1].id + 1 || 1;
+    const obj = { id, name: req.body.name, price: req.body.price };
 
-      return data;
-    })
-    .then((data) => {
-      writePromise('/data.json', data);
-      res.send('{message: post succeeded}');
-    })
-    .catch((err) => {
-      console.log(err);
-      res.send(`{message: ${err}}`);
-    });
+    data.push(obj);
+
+    await writePromise('/data.json', data);
+
+    res.send('{message: post succeeded}');
+  } catch (e) {
+    res.send(`{message: ${err}}`);
+  }
 });
 
 /** Read */
