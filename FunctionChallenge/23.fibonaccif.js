@@ -1,4 +1,5 @@
-// 2.23 Make a function fibonaccif that returns a generator that will return the next fibonacci number
+// 2.23 Make a function fibonaccif that returns a generator that will return the next
+// fibonacci number
 // var fib = fibonaccif(0, 1); // must by fibonaccif(0, 1)
 // fib(); // 0
 // fib(); // 1

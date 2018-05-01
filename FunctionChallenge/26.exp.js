@@ -2,19 +2,19 @@
 // var sae = [mul, 5, 11];
 // exp(sae); // 55
 // exp(42); // 42
-const { mul } = require("./2.binaryFunction");
+// const { mul } = require("./2.binaryFunction");
 
 function exp(arr) {
-  if (typeof arr === "number") {
+  if (typeof arr === 'number') {
     return arr;
-  } else if (typeof arr[0] === "function") {
+  } else if (typeof arr[0] === 'function') {
     const [, ...parr] = [...arr];
     return arr[0](...parr);
   }
   return undefined;
 }
 
-const sae = [mul, 3, 11];
-
-console.log(exp(sae));
-console.log(exp(42));
+module.exports = exp;
+// const sae = [mul, 3, 11];
+// console.log(exp(sae));
+// console.log(exp(42));

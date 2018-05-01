@@ -18,17 +18,17 @@ function counter(num) {
     down() {
       num -= 1;
       return num;
-    }
+    },
   };
 }
 
-const obj = counter(10);
-const up = obj.up;
-const down = obj.down;
-
-console.log(down());
-console.log(up());
-console.log(up());
-console.log(up());
-console.log(down());
-console.log(down());
+module.exports = counter;
+// const obj = counter(10);
+// const up = obj.up;
+// const down = obj.down;
+// console.log(down());
+// console.log(up());
+// console.log(up());
+// console.log(up());
+// console.log(down());
+// console.log(down());

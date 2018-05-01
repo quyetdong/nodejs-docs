@@ -6,10 +6,10 @@
 // genG(); // G2
 // genH(); // H1
 // genH(); // H2
-const { inc1: inc } = require("./7.inc");
+// const { inc1: inc } = require('./7.inc');
 
 function gensymff(ufn, seed) {
-  return str => {
+  return (str) => {
     let iter = seed;
 
     return function gensym() {
@@ -19,11 +19,12 @@ function gensymff(ufn, seed) {
   };
 }
 
-gensymf = gensymff(inc, 0);
-genG = gensymf("G");
-genH = gensymf("H");
-console.log(genH());
-console.log(genG());
-console.log(genG());
-console.log(genG());
-console.log(genH());
+module.exports = gensymff;
+// gensymf = gensymff(inc, 0);
+// genG = gensymf("G");
+// genH = gensymf("H");
+// console.log(genH());
+// console.log(genG());
+// console.log(genG());
+// console.log(genG());
+// console.log(genH());

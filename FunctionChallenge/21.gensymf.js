@@ -15,10 +15,11 @@ function gensymf(str) {
   };
 }
 
-genG = gensymf("G");
-genH = gensymf("H");
-console.log(genG());
-console.log(genG());
-console.log(genH());
-console.log(genG());
-console.log(genH());
+module.exports = gensymf;
+// genG = gensymf("G");
+// genH = gensymf("H");
+// console.log(genG());
+// console.log(genG());
+// console.log(genH());
+// console.log(genG());
+// console.log(genH());

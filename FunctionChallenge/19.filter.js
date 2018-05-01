@@ -1,4 +1,5 @@
-// 2.19 Write a filter function that takes a generator and a predicate and produces a generator that produces only the values approved by the predicate
+// 2.19 Write a filter function that takes a generator and a predicate and produces
+// a generator that produces only the values approved by the predicate
 // var fil = filter(fromTo(0, 5),
 //   function even(value) {
 //     return (value % 2) === 0;

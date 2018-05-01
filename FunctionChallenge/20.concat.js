@@ -7,7 +7,7 @@
 // con(); // 0
 // con(); // 1
 // con(); // undefined
-const fromTo = require("./15.fromTo");
+// const fromTo = require("./15.fromTo");
 
 function concat(gen1, gen2) {
   let check = 0;
@@ -28,9 +28,10 @@ function concat(gen1, gen2) {
   };
 }
 
-const con = concat(fromTo(0, 3), fromTo(0, 1));
-console.log(con()); // 0
-console.log(con());
-console.log(con());
-console.log(con());
-console.log(con());
+module.exports = concat;
+// const con = concat(fromTo(0, 3), fromTo(0, 1));
+// console.log(con()); // 0
+// console.log(con());
+// console.log(con());
+// console.log(con());
+// console.log(con());

@@ -4,8 +4,8 @@
 
 // ele(); // 2 => index 1
 // ele(); // 3 => index 2
-// ele(); // undefined => index 3
-const fromTo = require("./15.fromTo");
+// ele(); // undefined => index undefined
+// const fromTo = require("./15.fromTo");
 
 function element(arr, gen) {
   function* igen() {
@@ -21,8 +21,8 @@ function element(arr, gen) {
   return () => gigen.next().value;
 }
 
+module.exports = element;
 // var ele = element([1, 2, 3, 4], fromTo(1, 3));
-
 // console.log(ele())
 // console.log(ele())
 // console.log(ele())
