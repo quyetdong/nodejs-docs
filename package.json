@@ -21,7 +21,7 @@
   "homepage": "https://github.com/quyetdong/FA_NODEJS1801_Node#readme",
   "dependencies": {
     "babel-cli": "^6.26.0",
-    "babel-preset-env": "^1.6.1",
+    "babel-preset-env": "^1.7.0",
     "body-parser": "^1.18.2",
     "eslint": "^4.19.1",
     "eslint-config-airbnb-base": "^12.1.0",
@@ -30,14 +30,13 @@
     "husky": "^0.14.3",
     "jest": "^22.4.3",
     "lint-staged": "^7.0.4",
-    "nodemon": "^1.17.3",
     "nunjucks": "^3.1.2",
     "prettier": "1.12.0"
   },
   "devDependencies": {
     "eslint-config-airbnb-base": "^12.1.0",
     "eslint-plugin-import": "^2.11.0",
-    "nodemon": "^1.17.3",
+    "nodemon": "^2.0.2",
     "prettier": "1.12.0",
     "pretty-quick": "^1.4.1"
   },
