@@ -179,19 +179,30 @@ String truyền vào require là tên của file trong thư viện
 ## 4.11. Tạo một server đơn giản lẳng nghe ở cổng 8000, request trả lại "Hello world" sử dụng Http APIs
 
 ## 4.12. Event emitter trong nodejs là gì ?. Kể tên và nêu chức năng của các phương thức trong lớp Event emitter
-Two kinds of event: System events (events coming from the computer system, đến từ C++ core, các event mà JS vốn không có, được add thêm nhờ có C++), Custom events (event do người dùng tự định nghĩa từ event emitter). Khi có event xảy ra ở system, nó sẽ tạo ra một custom event để giúp developer dễ dàng quản lý và xử lý event 
+Two kinds of event: 
+  System events (events coming from the computer system, đến từ C++ core, các event mà JS vốn không có, được add thêm nhờ có C++)
+  Custom events (event do người dùng tự định nghĩa từ event emitter). 
+  Khi có event xảy ra ở system, nó sẽ tạo ra một custom event để giúp developer dễ dàng quản lý và xử lý event 
 
 Event Emitter: cho phép tạo ra các custom event
 
 ## 4.13. Chức năng của Event Loop là gì ?. Event loop trong nodeJs có giống Event loop trong browser hay không ?
-* Event Loop là một cơ chế bên trong NodeJS (được thêm vào nhờ các dòng code C++) liên tục kiểm tra các sự kiện được hoàn thành trong queue và gọi hàm callback khi V8 đã thực thi xong tương ứng với sự kiện đó
+* Event Loop là một cơ chế bên trong NodeJS (được thêm vào nhờ các dòng code C++) liên tục kiểm tra các sự kiện được hoàn thành trong queue (event queue, message queue) và gọi hàm callback (event handler) khi V8 đã thực thi xong tương ứng với sự kiện đó
 
 * So sánh: cơ chế giống nhau, đều liên tục kiểm tra sự kiện được hoàn thành (hàm chờ trong queue) và kiểm tra call stack có rỗng hay không để thực thi hàm đang chờ trong queue
 Khác nhau là trong browser: Event Loop liên quan đến Timer của browser ; 
    Trong Nodejs: Event Loop liên quan đến việc đọc ghi file, truy xuất cơ sở dữ liệu
 
 ## 4.14. Trình bày các khái niệm: Event Driven, Non - Blocking trong nodeJS
-* Event Driven: Là một mô hình lập trình trong đó chương trình được thực thi khác nhau (luồng thực thi của chương trình) phụ thuộc vào các tương tác từ người dùng, kết quả đầu ra hay thông điệp từ các chương trình khác gửi đến
+* Event Driven programming (Event-driven architecture)
+  Là một mô hình lập trình trong đó chương trình được thực thi khác nhau (luồng thực thi của chương trình) phụ thuộc vào các tương tác từ người dùng, kết quả đầu ra hay thông điệp từ các chương trình khác gửi đến
+
+
+* Event Driven components:
+  1, Event emitter: Matching event name with event handler, register the event to Event loop
+  2, Callback function (event handler): be called when an event is triggered
+  3, Event loop: listen for event triggered and calls the corresponding event handler
+
 
 * Non - blocking: Là việc cho phép thực thi các chương trình hay tác vụ khác mà không phải dừng tác vụ đang chạy hiện thời
 
